@@ -446,3 +446,15 @@ h1 {
   margin-top: 20px;
   color: #4CAF50;
 }
+
+/*puntuacion final??*/
+.total-score {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+}
+
+.total-score span {
+  color: #FF5733; /* Color destacado para la puntuación */
+}
