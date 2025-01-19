@@ -6,6 +6,10 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 const WeightChart = ({ data }) => {
+  // Calculamos el valor mínimo y máximo de los datos de peso para ajustar la escala y
+  const minWeight = Math.min(...data.map(item => item.weight)) - 1; // Restamos 5 para dar margen
+  const maxWeight = Math.max(...data.map(item => item.weight)) + 1; // Sumamos 5 para dar margen
+
   // Datos para el gráfico
   const chartData = {
     labels: data.map(item => item.date), // Fechas
@@ -36,7 +40,8 @@ const WeightChart = ({ data }) => {
           display: true,
           text: 'Peso (kg)',
         },
-        min: 0,
+        min: minWeight, // Ajusta el mínimo dinámicamente
+        max: maxWeight, // Ajusta el máximo dinámicamente
       },
     },
   };

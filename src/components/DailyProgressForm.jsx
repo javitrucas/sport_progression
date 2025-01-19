@@ -51,7 +51,7 @@ function DailyProgressForm({ onComplete }) {
               className={`form-button ${noCheatMeals ? 'active' : ''}`}
               onClick={() => setNoCheatMeals(!noCheatMeals)}
             >
-              Alimentación
+              Estiramientos
             </button>
           </div>
 

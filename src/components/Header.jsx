@@ -5,7 +5,7 @@ function Header({ days }) {
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    if (days > 1) {
+    if (days > 0) {
       setAnimate(true); // Iniciar animación al completar un día
       setTimeout(() => setAnimate(false), 3000); // Detener la animación después de 3 segundos
     }
@@ -13,7 +13,7 @@ function Header({ days }) {
 
   return (
     <header className={`header ${animate ? 'animate' : ''}`}>
-      <h1>75 Hard</h1>
+      <h1>Días completados</h1>
       <div className={`days ${animate ? 'animate' : ''}`}>
         {days}/75
       </div>
