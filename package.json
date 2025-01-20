@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://javitrucas.github.io/web-deporte",
+  "homepage": "https://javitrucas.github.io/sport_progression",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
